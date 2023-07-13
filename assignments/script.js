@@ -45,3 +45,27 @@ const tip = bill > 50 && bill < 300 ? (bill * 15) / 100 : (bill * 20) / 100;
 console.log(`The bill was ${bill}, and tip was ${tip}, and total value ${bill + tip}`);
 
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+
+//function
+const calcAverage = (firstTimeScore, secondTimeScore, thirdTimeScore) => (firstTimeScore + secondTimeScore + thirdTimeScore) / 3;
+
+function checkWinner(avgDolphins, avgKoalas) {
+    if (avgDolphins / 2 > avgKoalas) {
+        console.log(`Dolphins win(${avgDolphins} vs. ${avgKoalas})`);
+    } else if (avgDolphins < avgKoalas / 2) {
+        console.log(`Koalas win(${avgKoalas} vs. ${avgDolphins})`);
+    } else {
+        console.log("No team wins...");
+    }
+}
+
+let avgScoreDolphins = calcAverage(1, 23, 71);
+let avgScoreKoalas = calcAverage(65, 54, 49);
+
+checkWinner(avgScoreDolphins, avgScoreKoalas);
+
+avgScoreDolphins = calcAverage(1, 4, 7);
+avgScoreKoalas = calcAverage(65, 54, 49);
+
+checkWinner(avgScoreDolphins, avgScoreKoalas);
